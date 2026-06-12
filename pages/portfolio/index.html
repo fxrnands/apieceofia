@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en" class="is-covered">
+
+<head>
+    <meta charset="UTF-8">
+    <script>document.documentElement.classList.add('is-covered')</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#d62f66">
+    <style>
+        html{background:linear-gradient(to right,#d62f66 50%,#98a74b 50%)}
+        html.is-covered body{opacity:0;visibility:hidden}
+    </style>
+    <title>Portfolio | Apieceofia</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/base.css">
+    <link rel="stylesheet" href="../../css/transitions.css">
+    <link rel="stylesheet" href="../../css/portfolio.css">
+</head>
+
+<body>
+
+    <div class="page-transition" aria-hidden="true">
+        <div class="page-transition__panel page-transition__panel--left"></div>
+        <div class="page-transition__panel page-transition__panel--right"></div>
+    </div>
+
+    <nav class="site-nav">
+        <a class="logo" href="../home.html"><img src="../../assets/images/nav-logo.png" alt="Apieceofia"></a>
+        <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav-drawer">
+            <span class="nav-toggle__line"></span>
+            <span class="nav-toggle__line"></span>
+            <span class="nav-toggle__line"></span>
+        </button>
+        <div class="nav-drawer" id="nav-drawer" aria-hidden="true">
+            <div class="nav-drawer__backdrop" data-nav-close></div>
+            <div class="nav-drawer__panel">
+                <ul class="nav-links">
+                    <li><a href="../home.html">Home</a></li>
+                    <li><a href="../about.html">About Me</a></li>
+                    <li><a class="active" href="index.html">Portfolio</a></li>
+                    <li><a href="../contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="portfolio">
+        <a class="card" href="poster.html">
+            <div class="card-image">
+                <img src="https://picsum.photos/seed/portfolio-poster/800/520" alt="Poster design preview">
+            </div>
+            <div class="card-overlay">
+                <img class="card-title" src="../../assets/icons/poster-design.png" alt="Poster Design">
+            </div>
+        </a>
+
+        <article class="card">
+            <div class="card-image">
+                <img src="https://picsum.photos/seed/portfolio-logo/800/520" alt="Brand logo preview">
+            </div>
+            <div class="card-overlay">
+                <img class="card-title" src="../../assets/icons/brand-logo.png" alt="Brand Logo">
+            </div>
+        </article>
+
+        <article class="card">
+            <div class="card-image">
+                <img src="https://picsum.photos/seed/portfolio-tshirt/800/520" alt="T-shirt design preview">
+            </div>
+            <div class="card-overlay">
+                <img class="card-title" src="../../assets/icons/tshirt-design.png" alt="T-Shirt Design">
+            </div>
+        </article>
+
+        <article class="card">
+            <div class="card-image">
+                <img src="https://picsum.photos/seed/portfolio-packaging/800/520" alt="Packaging design preview">
+            </div>
+            <div class="card-overlay">
+                <img class="card-title" src="../../assets/icons/packaging-design.png" alt="Packaging Design">
+            </div>
+        </article>
+
+        <article class="card">
+            <div class="card-image">
+                <img src="https://picsum.photos/seed/portfolio-clay/800/520" alt="Clay art preview">
+            </div>
+            <div class="card-overlay">
+                <img class="card-title" src="../../assets/icons/clay-art.png" alt="Clay Art">
+            </div>
+        </article>
+
+        <a class="card" href="drawing.html">
+            <div class="card-image">
+                <img src="https://picsum.photos/seed/portfolio-drawing/800/520" alt="Drawing preview">
+            </div>
+            <div class="card-overlay">
+                <img class="card-title" src="../../assets/icons/drawing.png" alt="Drawing">
+            </div>
+        </a>
+    </section>
+
+    <script src="../../js/main.js" defer></script>
+</body>
+
+</html>

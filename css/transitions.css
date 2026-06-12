@@ -1,15 +1,18 @@
-html.is-loading {
+html.is-covered {
     overflow: hidden;
+    background: linear-gradient(to right, #d62f66 50%, #98a74b 50%);
 }
 
-html.is-loading body {
+html.is-covered body {
     overflow: hidden;
+    opacity: 0;
+    visibility: hidden;
 }
 
 .page-transition {
     position: fixed;
     inset: 0;
-    z-index: 9999;
+    z-index: 2147483647;
     display: flex;
     pointer-events: none;
 }
@@ -23,6 +26,7 @@ html.is-loading body {
     height: 100%;
     transform: translate3d(0, 100%, 0);
     will-change: transform;
+    backface-visibility: hidden;
 }
 
 .page-transition__panel--left {
@@ -33,21 +37,20 @@ html.is-loading body {
     background: #98a74b;
 }
 
-/* Snap to covered on load — no animation */
-html.is-loading .page-transition__panel {
+/* Snap to covered on load — hold still until JS starts reveal/cover */
+html.is-covered .page-transition__panel {
     transform: translate3d(0, 0, 0);
+}
+
+html.is-covered .page-transition:not(.is-revealing):not(.is-covering) .page-transition__panel {
     transition: none;
 }
 
-/* Leave: slide up to cover */
-.page-transition.is-covering .page-transition__panel--left {
-    transform: translate3d(0, 0, 0);
-    transition: transform 0.7s cubic-bezier(0.76, 0, 0.24, 1);
-}
-
+/* Leave: both panels cover together */
+.page-transition.is-covering .page-transition__panel--left,
 .page-transition.is-covering .page-transition__panel--right {
     transform: translate3d(0, 0, 0);
-    transition: transform 0.7s cubic-bezier(0.76, 0, 0.24, 1) 0.05s;
+    transition: transform 0.7s cubic-bezier(0.76, 0, 0.24, 1);
 }
 
 /* Enter: slide up to reveal */
@@ -61,18 +64,9 @@ html.is-loading .page-transition__panel {
     transition: transform 0.7s cubic-bezier(0.76, 0, 0.24, 1) 0.05s;
 }
 
-body > *:not(.page-transition) {
-    transition:
-        opacity 0.45s ease,
-        transform 0.45s ease;
-}
-
-html.is-loading body > *:not(.page-transition) {
-    opacity: 0;
-}
-
 body.is-leaving > *:not(.page-transition) {
     opacity: 0;
+    transition: opacity 0.35s ease;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -81,7 +75,8 @@ body.is-leaving > *:not(.page-transition) {
         transition: none !important;
     }
 
-    html.is-loading body > *:not(.page-transition) {
+    html.is-covered body {
         opacity: 1;
+        visibility: visible;
     }
 }

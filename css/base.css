@@ -125,6 +125,36 @@ body.nav-open .nav-toggle__line:nth-child(3) {
     border-radius: 30px;
 }
 
+.back-arrow {
+    position: fixed;
+    bottom: 30px;
+    right: 40px;
+    width: 44px;
+    height: 44px;
+    background: #d1d1d1;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: #ffffff;
+    z-index: 50;
+    transition: background-color 0.25s ease, transform 0.25s ease;
+}
+
+.back-arrow svg {
+    display: block;
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+    transform: translateX(-1px);
+}
+
+.back-arrow:hover {
+    background: #98a74b;
+    transform: translateX(-3px);
+}
+
 @media (max-width: 1024px) {
     :root {
         --nav-height: 88px;
@@ -239,5 +269,10 @@ body.nav-open .nav-toggle__line:nth-child(3) {
     .logo {
         width: 80px;
         height: 40px;
+    }
+
+    .back-arrow {
+        bottom: 24px;
+        right: 24px;
     }
 }

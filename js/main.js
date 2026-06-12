@@ -1,13 +1,31 @@
 const TRANSITION_DURATION = 700;
 const TRANSITION_STAGGER = 50;
+const TRANSITION_FLAG = 'page-transition';
+const COVER_GRADIENT = 'linear-gradient(to right, #d62f66 50%, #98a74b 50%)';
 
 let isTransitioning = false;
+let transitionOverlay = null;
 
 function prefersReducedMotion() {
     return window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 }
 
-function createTransitionOverlay() {
+function coverDocument() {
+    document.documentElement.classList.add('is-covered');
+    document.documentElement.style.background = COVER_GRADIENT;
+}
+
+function clearPanelInlineStyles(overlay) {
+    overlay.querySelectorAll('.page-transition__panel').forEach((panel) => {
+        panel.style.transition = '';
+        panel.style.transform = '';
+    });
+}
+
+function getOrCreateTransitionOverlay() {
+    const existing = document.querySelector('.page-transition');
+    if (existing) return existing;
+
     const overlay = document.createElement('div');
     overlay.className = 'page-transition';
     overlay.setAttribute('aria-hidden', 'true');
@@ -25,19 +43,58 @@ function wait(ms) {
     });
 }
 
-function resetPanels(overlay) {
+function waitForNextFrame() {
+    return new Promise((resolve) => {
+        requestAnimationFrame(() => requestAnimationFrame(resolve));
+    });
+}
+
+function resetOverlay(overlay) {
     overlay.classList.remove('is-revealing', 'is-covering', 'is-active');
+    overlay.style.visibility = 'hidden';
     overlay.querySelectorAll('.page-transition__panel').forEach((panel) => {
         panel.style.transition = 'none';
         panel.style.transform = 'translate3d(0, 100%, 0)';
     });
+    overlay.getBoundingClientRect();
+    clearPanelInlineStyles(overlay);
+    overlay.style.visibility = '';
+}
 
-    requestAnimationFrame(() => {
-        overlay.querySelectorAll('.page-transition__panel').forEach((panel) => {
-            panel.style.transition = '';
-            panel.style.transform = '';
-        });
-    });
+async function revealPage(overlay) {
+    if (prefersReducedMotion()) {
+        document.documentElement.classList.remove('is-covered');
+        document.documentElement.style.background = '';
+        resetOverlay(overlay);
+        return;
+    }
+
+    await waitForNextFrame();
+    clearPanelInlineStyles(overlay);
+    overlay.classList.add('is-revealing');
+    document.documentElement.classList.remove('is-covered');
+    document.documentElement.style.background = '';
+
+    await wait(TRANSITION_DURATION + TRANSITION_STAGGER);
+    resetOverlay(overlay);
+}
+
+async function leavePage(overlay, url) {
+    if (prefersReducedMotion()) {
+        window.location.href = url;
+        return;
+    }
+
+    isTransitioning = true;
+    clearPanelInlineStyles(overlay);
+    overlay.classList.remove('is-revealing');
+    document.body.classList.add('is-leaving');
+    document.documentElement.style.background = COVER_GRADIENT;
+    overlay.classList.add('is-active', 'is-covering');
+
+    await wait(TRANSITION_DURATION);
+    sessionStorage.setItem(TRANSITION_FLAG, '1');
+    window.location.href = url;
 }
 
 function isInternalPageLink(anchor) {
@@ -54,35 +111,6 @@ function isInternalPageLink(anchor) {
     }
 
     return href.endsWith('.html') || !href.includes('.');
-}
-
-async function revealPage(overlay) {
-    if (prefersReducedMotion()) {
-        document.documentElement.classList.remove('is-loading');
-        overlay.remove();
-        return;
-    }
-
-    await wait(50);
-    overlay.classList.add('is-revealing');
-
-    await wait(TRANSITION_DURATION + TRANSITION_STAGGER);
-    document.documentElement.classList.remove('is-loading');
-    resetPanels(overlay);
-}
-
-async function leavePage(overlay, url) {
-    if (prefersReducedMotion()) {
-        window.location.href = url;
-        return;
-    }
-
-    isTransitioning = true;
-    document.body.classList.add('is-leaving');
-    overlay.classList.add('is-active', 'is-covering');
-
-    await wait(TRANSITION_DURATION + TRANSITION_STAGGER);
-    window.location.href = url;
 }
 
 function bindPageTransitions(overlay) {
@@ -165,12 +193,23 @@ function initAboutPhotoSkeleton() {
 }
 
 function initPageTransitions() {
-    const overlay = createTransitionOverlay();
-    bindPageTransitions(overlay);
+    transitionOverlay = getOrCreateTransitionOverlay();
+    bindPageTransitions(transitionOverlay);
     initMobileNav();
     initAboutPhotoSkeleton();
-    revealPage(overlay);
+    revealPage(transitionOverlay);
 }
+
+window.addEventListener('pageshow', (event) => {
+    if (!event.persisted) return;
+
+    document.documentElement.classList.remove('is-covered');
+    document.documentElement.style.background = '';
+
+    if (transitionOverlay) {
+        resetOverlay(transitionOverlay);
+    }
+});
 
 if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', initPageTransitions);

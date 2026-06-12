@@ -1,13 +1,12 @@
-const carousel = document.getElementById('carousel');
-const title = document.getElementById('event-title');
-
-if (carousel && title) {
+function initCarousel(carousel, title) {
     const cards = Array.from(carousel.querySelectorAll('.card'));
     const positions = ['pos-0', 'pos-1', 'pos-2', 'pos-3', 'pos-4'];
     let startX = 0;
     let isDragging = false;
 
     function updateTitle() {
+        if (!title) return;
+
         const activeCard = cards.find((card) => card.classList.contains('pos-2'));
         if (activeCard) {
             title.textContent = activeCard.dataset.name || '';
@@ -33,7 +32,7 @@ if (carousel && title) {
         if (!isDragging) return;
         const deltaX = event.clientX - startX;
         if (Math.abs(deltaX) > 50) {
-            rotate(deltaX > 0 ? -1 : 1);
+            rotate(deltaX > 0 ? 1 : -1);
         }
         isDragging = false;
     });
@@ -45,9 +44,24 @@ if (carousel && title) {
     carousel.addEventListener('touchend', (event) => {
         const deltaX = event.changedTouches[0].clientX - startX;
         if (Math.abs(deltaX) > 50) {
-            rotate(deltaX > 0 ? -1 : 1);
+            rotate(deltaX > 0 ? 1 : -1);
         }
     }, { passive: true });
 
+    const wrap = carousel.closest('.carousel-wrap');
+    if (wrap) {
+        const prevBtn = wrap.querySelector('.carousel-arrow--prev');
+        const nextBtn = wrap.querySelector('.carousel-arrow--next');
+
+        prevBtn?.addEventListener('click', () => rotate(1));
+        nextBtn?.addEventListener('click', () => rotate(-1));
+    }
+
     updateTitle();
 }
+
+document.querySelectorAll('.card-carousel').forEach((carousel) => {
+    const titleId = carousel.dataset.titleTarget;
+    const title = titleId ? document.getElementById(titleId) : null;
+    initCarousel(carousel, title);
+});

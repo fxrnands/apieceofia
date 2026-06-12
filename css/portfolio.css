@@ -5,32 +5,124 @@ body {
 .portfolio {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
-    padding: calc(var(--nav-height) + 30px) 30px 30px;
+    gap: 28px;
+    padding: calc(var(--nav-height) + 30px) 30px 40px;
     min-height: 100vh;
+    align-content: start;
 }
 
 .card {
-    background: white;
-    border-radius: 15px;
+    position: relative;
+    aspect-ratio: 3 / 2;
+    border-radius: 22px;
     overflow: hidden;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.14);
     text-decoration: none;
     color: inherit;
     display: block;
+    cursor: pointer;
 }
 
-.image {
-    height: 180px;
+.card-image {
+    width: 100%;
+    height: 100%;
     background: #9b9b9b;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
 }
 
-.card h2 {
-    padding: 15px;
-    text-align: center;
-    color: #666;
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.55s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.card-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding: 0 24px 2rem;
+    background: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 0.55) 0%,
+        rgba(0, 0, 0, 0.15) 45%,
+        transparent 70%
+    );
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.card-title {
+    width: min(300px, 78%);
+    height: auto;
+    display: block;
+    filter: drop-shadow(0 2px 12px rgba(0, 0, 0, 0.35));
+    transform: translateY(18px);
+    opacity: 0;
+    transition:
+        transform 0.45s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+        opacity 0.4s ease;
+}
+
+.card:hover .card-image img,
+.card:focus-visible .card-image img {
+    transform: scale(1.06);
+}
+
+.card:hover .card-overlay,
+.card:focus-visible .card-overlay {
+    opacity: 1;
+}
+
+.card:hover .card-title,
+.card:focus-visible .card-title {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.card:focus-visible {
+    outline: 3px solid #98a74b;
+    outline-offset: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .card-image img,
+    .card-overlay,
+    .card-title {
+        transition: none;
+    }
+
+    .card-overlay,
+    .card-title {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+@media (max-width: 1024px) {
+    .portfolio {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 22px;
+        padding: calc(var(--nav-height) + 24px) 24px 32px;
+    }
+
+    .card-overlay,
+    .card-title {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+@media (max-width: 600px) {
+    .portfolio {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: calc(var(--nav-height) + 20px) 20px 28px;
+    }
+
+    .card {
+        border-radius: 18px;
+    }
 }
