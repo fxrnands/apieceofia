@@ -1,0 +1,36 @@
+body {
+    background: #f4f4f4;
+}
+
+.portfolio {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    padding: calc(var(--nav-height) + 30px) 30px 30px;
+    min-height: 100vh;
+}
+
+.card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.image {
+    height: 180px;
+    background: #9b9b9b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.card h2 {
+    padding: 15px;
+    text-align: center;
+    color: #666;
+}

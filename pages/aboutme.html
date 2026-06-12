@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" class="is-loading">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me | Apieceofia</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/transitions.css">
+    <link rel="stylesheet" href="../css/aboutme.css">
+</head>
+
+<body>
+
+    <nav class="site-nav">
+        <a class="logo" href="home.html"><img src="../assets/images/nav-logo.png" alt="Apieceofia"></a>
+        <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav-drawer">
+            <span class="nav-toggle__line"></span>
+            <span class="nav-toggle__line"></span>
+            <span class="nav-toggle__line"></span>
+        </button>
+        <div class="nav-drawer" id="nav-drawer" aria-hidden="true">
+            <div class="nav-drawer__backdrop" data-nav-close></div>
+            <div class="nav-drawer__panel">
+                <ul class="nav-links">
+                    <li><a href="home.html">Home</a></li>
+                    <li><a class="active" href="aboutme.html">About Me</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="about">
+        <div class="photo-box photo-box--loading">
+            <div class="photo-box__skeleton" aria-hidden="true"></div>
+            <img src="https://picsum.photos/seed/about-photo/840/1080" alt="Sofwatul Widad portrait" loading="lazy">
+        </div>
+
+        <div class="content">
+            <img class="about-name" src="../assets/images/sofwatul-widad.png" alt="Sofwatul Widad">
+            <h3>ABOUT ME</h3>
+            <div class="about-text">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <p>Curabitur pretium tincidunt lacus. Nulla gravida orci a odio. Nullam varius, turpis et commodo pharetra, est eros bibendum elit, nec luctus magna felis sollicitudin mauris.</p>
+            </div>
+
+            <div class="skills">
+                <div>LOGO</div>
+                <div>LOGO</div>
+                <div>LOGO</div>
+                <div>LOGO</div>
+            </div>
+        </div>
+    </section>
+
+    <script src="../js/main.js" defer></script>
+</body>
+
+</html>

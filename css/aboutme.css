@@ -1,0 +1,144 @@
+body {
+    background: #f4f4f4;
+}
+
+.about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    padding: calc(var(--nav-height) + 12px) 24px 40px;
+    min-height: 100vh;
+    transform: translateY(-28px);
+}
+
+.photo-box {
+    position: relative;
+    width: 420px;
+    max-width: 100%;
+    height: 540px;
+    background: #e0e0e0;
+    border-radius: 15px;
+    flex-shrink: 0;
+    overflow: hidden;
+}
+
+.photo-box__skeleton {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        90deg,
+        #d8d8d8 0%,
+        #ececec 50%,
+        #d8d8d8 100%
+    );
+    background-size: 200% 100%;
+    animation: photo-skeleton 1.4s ease-in-out infinite;
+}
+
+.photo-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.photo-box:not(.photo-box--loading) img {
+    opacity: 1;
+}
+
+.photo-box:not(.photo-box--loading) .photo-box__skeleton {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+@keyframes photo-skeleton {
+    0% {
+        background-position: 200% 0;
+    }
+
+    100% {
+        background-position: -200% 0;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .photo-box__skeleton {
+        animation: none;
+        background: #d8d8d8;
+    }
+}
+
+.content {
+    width: 500px;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.about-name {
+    width: min(480px, 100%);
+    height: auto;
+    display: block;
+    margin-bottom: 16px;
+}
+
+.content h3 {
+    width: 100%;
+    background: #777;
+    color: white;
+    margin-bottom: 10px;
+    padding: 4px 0;
+}
+
+.about-text {
+    width: 100%;
+}
+
+.about-text p {
+    color: #555;
+    font-size: 0.95rem;
+    line-height: 1.65;
+    margin-bottom: 14px;
+    text-align: left;
+}
+
+.about-text p:last-child {
+    margin-bottom: 0;
+}
+
+.skills {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.skills div {
+    width: 80px;
+    height: 80px;
+    background: #d3d3d3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+}
+
+@media (max-width: 900px) {
+    .about {
+        flex-direction: column;
+        padding-top: calc(var(--nav-height) + 8px);
+        transform: translateY(-16px);
+    }
+
+    .photo-box {
+        width: min(420px, 100%);
+        height: 460px;
+    }
+}

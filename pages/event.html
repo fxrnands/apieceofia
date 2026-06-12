@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" class="is-loading">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event | Apieceofia</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/transitions.css">
+    <link rel="stylesheet" href="../css/event.css">
+</head>
+
+<body>
+
+    <nav class="site-nav">
+        <a class="logo" href="home.html"><img src="../assets/images/nav-logo.png" alt="Apieceofia"></a>
+        <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav-drawer">
+            <span class="nav-toggle__line"></span>
+            <span class="nav-toggle__line"></span>
+            <span class="nav-toggle__line"></span>
+        </button>
+        <div class="nav-drawer" id="nav-drawer" aria-hidden="true">
+            <div class="nav-drawer__backdrop" data-nav-close></div>
+            <div class="nav-drawer__panel">
+                <ul class="nav-links">
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="aboutme.html">About Me</a></li>
+                    <li><a class="active" href="portfolio.html">Portfolio</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <h1 id="event-title">Event 1</h1>
+
+        <div class="card-carousel" id="carousel">
+            <div class="card pos-0" data-name="Event 4"><span>PHOTO 4</span></div>
+            <div class="card pos-1" data-name="Event 5"><span>PHOTO 5</span></div>
+            <div class="card pos-2" data-name="Event 1">
+                <span>PHOTO 1</span>
+                <a href="#" class="details-btn">See Details</a>
+            </div>
+            <div class="card pos-3" data-name="Event 2"><span>PHOTO 2</span></div>
+            <div class="card pos-4" data-name="Event 3"><span>PHOTO 3</span></div>
+        </div>
+    </main>
+
+    <a href="poster.html" class="back-arrow" aria-label="Back to poster">&#8592;</a>
+
+    <script src="../js/main.js" defer></script>
+    <script src="../js/event.js" defer></script>
+</body>
+
+</html>

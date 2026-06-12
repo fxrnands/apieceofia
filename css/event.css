@@ -1,0 +1,140 @@
+body {
+    background: #fff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 60px;
+}
+
+#event-title {
+    font-size: 80px;
+    color: #b82b52;
+    text-transform: uppercase;
+    font-weight: 900;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    transition: opacity 0.3s;
+}
+
+.card-carousel {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 450px;
+    cursor: grab;
+    user-select: none;
+}
+
+.card-carousel:active {
+    cursor: grabbing;
+}
+
+.card-carousel .card {
+    background-color: #d1d1d1;
+    border: 2px solid #b5b5b5;
+    border-radius: 20px;
+    position: absolute;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
+    transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.card-carousel .card span {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: bold;
+}
+
+.card-carousel .card.pos-0 {
+    width: 240px;
+    height: 280px;
+    transform: translateX(-240px);
+    z-index: 1;
+    opacity: 0.4;
+}
+
+.card-carousel .card.pos-1 {
+    width: 280px;
+    height: 340px;
+    transform: translateX(-130px);
+    z-index: 2;
+    opacity: 0.7;
+}
+
+.card-carousel .card.pos-2 {
+    width: 340px;
+    height: 440px;
+    background-color: #7a7a7a;
+    border: none;
+    z-index: 3;
+    transform: translateX(0);
+    opacity: 1;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+.card-carousel .card.pos-3 {
+    width: 280px;
+    height: 340px;
+    transform: translateX(130px);
+    z-index: 2;
+    opacity: 0.7;
+}
+
+.card-carousel .card.pos-4 {
+    width: 240px;
+    height: 280px;
+    transform: translateX(240px);
+    z-index: 1;
+    opacity: 0.4;
+}
+
+.details-btn {
+    position: absolute;
+    bottom: 25px;
+    right: 25px;
+    border: 2px solid #fff;
+    color: #fff;
+    padding: 6px 18px;
+    border-radius: 20px;
+    font-size: 11px;
+    text-decoration: none;
+    font-weight: bold;
+    opacity: 0;
+    transition: opacity 0.3s;
+    pointer-events: none;
+}
+
+.card-carousel .card.pos-2 .details-btn {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.back-arrow {
+    position: fixed;
+    bottom: 30px;
+    right: 40px;
+    width: 40px;
+    height: 40px;
+    background: #d1d1d1;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+}

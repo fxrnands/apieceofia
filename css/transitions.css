@@ -1,0 +1,87 @@
+html.is-loading {
+    overflow: hidden;
+}
+
+html.is-loading body {
+    overflow: hidden;
+}
+
+.page-transition {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    display: flex;
+    pointer-events: none;
+}
+
+.page-transition.is-active {
+    pointer-events: all;
+}
+
+.page-transition__panel {
+    flex: 1;
+    height: 100%;
+    transform: translate3d(0, 100%, 0);
+    will-change: transform;
+}
+
+.page-transition__panel--left {
+    background: #d62f66;
+}
+
+.page-transition__panel--right {
+    background: #98a74b;
+}
+
+/* Snap to covered on load — no animation */
+html.is-loading .page-transition__panel {
+    transform: translate3d(0, 0, 0);
+    transition: none;
+}
+
+/* Leave: slide up to cover */
+.page-transition.is-covering .page-transition__panel--left {
+    transform: translate3d(0, 0, 0);
+    transition: transform 0.7s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+.page-transition.is-covering .page-transition__panel--right {
+    transform: translate3d(0, 0, 0);
+    transition: transform 0.7s cubic-bezier(0.76, 0, 0.24, 1) 0.05s;
+}
+
+/* Enter: slide up to reveal */
+.page-transition.is-revealing .page-transition__panel--left {
+    transform: translate3d(0, -100%, 0);
+    transition: transform 0.7s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+.page-transition.is-revealing .page-transition__panel--right {
+    transform: translate3d(0, -100%, 0);
+    transition: transform 0.7s cubic-bezier(0.76, 0, 0.24, 1) 0.05s;
+}
+
+body > *:not(.page-transition) {
+    transition:
+        opacity 0.45s ease,
+        transform 0.45s ease;
+}
+
+html.is-loading body > *:not(.page-transition) {
+    opacity: 0;
+}
+
+body.is-leaving > *:not(.page-transition) {
+    opacity: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .page-transition__panel,
+    body > *:not(.page-transition) {
+        transition: none !important;
+    }
+
+    html.is-loading body > *:not(.page-transition) {
+        opacity: 1;
+    }
+}
