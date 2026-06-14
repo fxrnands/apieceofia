@@ -94,10 +94,14 @@
     display: block;
 }
 
-.site-footer__placeholder--photo {
+.site-footer__photo {
     flex: 1;
     width: 100%;
     min-height: 380px;
+    border-radius: 20px;
+    object-fit: cover;
+    display: block;
+    background: #ffffff;
 }
 
 .site-footer__address {
@@ -116,41 +120,49 @@
 
 .site-footer__form-header {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     justify-content: space-between;
-    gap: 20px;
+    gap: clamp(16px, 4vw, 48px);
+    width: 100%;
     margin-bottom: 22px;
 }
 
 .site-footer__title {
-    font-size: clamp(2rem, 3.2vw, 2.75rem);
-    font-weight: 900;
-    line-height: 1;
-    letter-spacing: 0.02em;
-    text-transform: uppercase;
-    color: transparent;
-    -webkit-text-stroke: 2px #ffffff;
-    paint-order: stroke fill;
+    display: block;
+    flex: 0 1 auto;
+    width: auto;
+    height: clamp(3.25rem, 7.5vw, 5rem);
+    min-width: 0;
+    max-width: none;
+    object-fit: contain;
+    object-position: left center;
 }
 
 .site-footer__social {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(100px, 1fr));
+    display: flex;
+    align-items: center;
     gap: 10px;
-    flex-shrink: 0;
+    flex: 0 0 auto;
 }
 
 .site-footer__social-link {
-    display: block;
-    padding: 7px 14px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    padding: 0;
     border: 2px solid #ffffff;
     border-radius: 999px;
     color: #ffffff;
-    font-size: 0.75rem;
-    font-weight: 600;
-    text-align: center;
     text-decoration: none;
     transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+.site-footer__social-link svg {
+    display: block;
+    width: 20px;
+    height: 20px;
 }
 
 .site-footer__social-link:hover {
@@ -280,23 +292,39 @@
         max-width: none;
     }
 
-    .site-footer__placeholder--photo {
+    .site-footer__photo {
         min-height: 320px;
     }
 
     .site-footer__form-header {
         flex-direction: column;
         align-items: stretch;
+        gap: 20px;
+    }
+
+    .site-footer__title {
+        height: clamp(2.75rem, 14vw, 3.75rem);
+        width: 100%;
+        object-position: left center;
     }
 
     .site-footer__social {
-        grid-template-columns: repeat(2, 1fr);
-        max-width: 280px;
+        justify-content: flex-start;
     }
 }
 
 @media (max-width: 480px) {
-    .site-footer__social {
-        max-width: none;
+    .site-footer__title {
+        height: clamp(2.25rem, 16vw, 3rem);
+    }
+
+    .site-footer__social-link {
+        width: 40px;
+        height: 40px;
+    }
+
+    .site-footer__social-link svg {
+        width: 18px;
+        height: 18px;
     }
 }
