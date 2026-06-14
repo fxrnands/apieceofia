@@ -60,7 +60,9 @@ function initCarousel(carousel, title) {
     updateTitle();
 }
 
-document.querySelectorAll('.card-carousel').forEach((carousel) => {
+window.initCarousel = initCarousel;
+
+document.querySelectorAll('.card-carousel:not(#portfolio-carousel)').forEach((carousel) => {
     const titleId = carousel.dataset.titleTarget;
     const title = titleId ? document.getElementById(titleId) : null;
     initCarousel(carousel, title);

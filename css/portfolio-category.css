@@ -1,0 +1,311 @@
+body {
+    overflow-x: hidden;
+    background: #ffffff;
+}
+
+.portfolio-detail {
+    background: #ffffff;
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 12px;
+    padding: calc(var(--nav-height) + 20px) 24px 48px;
+}
+
+.portfolio-detail__title {
+    width: min(520px, 85vw);
+    height: auto;
+    display: block;
+}
+
+.portfolio-detail .carousel-wrap {
+    width: 100%;
+    max-width: 1240px;
+    margin-top: 0;
+}
+
+.portfolio-detail .card-carousel {
+    max-width: none;
+    height: 580px;
+}
+
+.portfolio-detail .card-carousel .card.pos-0 {
+    width: 310px;
+    height: 360px;
+    transform: translateX(-310px);
+}
+
+.portfolio-detail .card-carousel .card.pos-1 {
+    width: 360px;
+    height: 440px;
+    transform: translateX(-168px);
+}
+
+.portfolio-detail .card-carousel .card.pos-2 {
+    width: 440px;
+    height: 570px;
+}
+
+.portfolio-detail .card-carousel .card.pos-3 {
+    width: 360px;
+    height: 440px;
+    transform: translateX(168px);
+}
+
+.portfolio-detail .card-carousel .card.pos-4 {
+    width: 310px;
+    height: 360px;
+    transform: translateX(310px);
+}
+
+.portfolio-detail .card-carousel .card-label {
+    font-size: 0.95rem;
+    padding: 16px 18px;
+}
+
+.portfolio-detail .card-carousel .details-btn {
+    bottom: 28px;
+    right: 28px;
+    padding: 8px 22px;
+    font-size: 12px;
+}
+
+.back-link {
+    position: fixed;
+    bottom: 30px;
+    right: 40px;
+    padding: 10px 22px;
+    background: #d1d1d1;
+    border-radius: 999px;
+    color: #ffffff;
+    font-size: 0.875rem;
+    font-weight: 600;
+    text-decoration: none;
+    z-index: 50;
+    transition: background-color 0.25s ease, transform 0.25s ease;
+}
+
+.back-link:hover {
+    background: #98a74b;
+    transform: translateX(-3px);
+}
+
+@media (max-width: 1024px) {
+    .portfolio-detail {
+        padding: calc(var(--nav-height) + 16px) 20px 40px;
+        gap: 10px;
+    }
+
+    .portfolio-detail__title {
+        width: min(460px, 82vw);
+    }
+
+    .portfolio-detail .carousel-wrap {
+        gap: 14px;
+    }
+
+    .portfolio-detail .carousel-arrow {
+        width: 40px;
+        height: 40px;
+    }
+
+    .portfolio-detail .carousel-arrow svg {
+        width: 17px;
+        height: 17px;
+    }
+
+    .portfolio-detail .card-carousel {
+        height: 500px;
+    }
+
+    .portfolio-detail .card-carousel .card.pos-0 {
+        width: 260px;
+        height: 300px;
+        transform: translateX(-260px);
+    }
+
+    .portfolio-detail .card-carousel .card.pos-1 {
+        width: 300px;
+        height: 370px;
+        transform: translateX(-140px);
+    }
+
+    .portfolio-detail .card-carousel .card.pos-2 {
+        width: 370px;
+        height: 480px;
+    }
+
+    .portfolio-detail .card-carousel .card.pos-3 {
+        width: 300px;
+        height: 370px;
+        transform: translateX(140px);
+    }
+
+    .portfolio-detail .card-carousel .card.pos-4 {
+        width: 260px;
+        height: 300px;
+        transform: translateX(260px);
+    }
+
+    .portfolio-detail .card-carousel .card-label {
+        font-size: 0.875rem;
+        padding: 14px 16px;
+    }
+
+    .portfolio-detail .card-carousel .details-btn {
+        bottom: 22px;
+        right: 22px;
+        padding: 7px 18px;
+        font-size: 11px;
+    }
+
+    .back-link {
+        bottom: 26px;
+        right: 28px;
+    }
+}
+
+@media (max-width: 768px) {
+    .portfolio-detail {
+        padding: calc(var(--nav-height) + 12px) 16px 36px;
+        gap: 8px;
+    }
+
+    .portfolio-detail__title {
+        width: min(380px, 90vw);
+    }
+
+    .portfolio-detail .carousel-wrap {
+        gap: 8px;
+    }
+
+    .portfolio-detail .carousel-arrow {
+        width: 36px;
+        height: 36px;
+    }
+
+    .portfolio-detail .carousel-arrow svg {
+        width: 15px;
+        height: 15px;
+    }
+
+    .portfolio-detail .card-carousel {
+        height: 430px;
+        transform: none;
+    }
+
+    .portfolio-detail .card-carousel .card.pos-0 {
+        width: 210px;
+        height: 250px;
+        transform: translateX(-210px);
+    }
+
+    .portfolio-detail .card-carousel .card.pos-1 {
+        width: 240px;
+        height: 300px;
+        transform: translateX(-112px);
+    }
+
+    .portfolio-detail .card-carousel .card.pos-2 {
+        width: 290px;
+        height: 380px;
+    }
+
+    .portfolio-detail .card-carousel .card.pos-3 {
+        width: 240px;
+        height: 300px;
+        transform: translateX(112px);
+    }
+
+    .portfolio-detail .card-carousel .card.pos-4 {
+        width: 210px;
+        height: 250px;
+        transform: translateX(210px);
+    }
+
+    .portfolio-detail .card-carousel .card-label {
+        font-size: 0.8125rem;
+        padding: 12px 14px;
+    }
+
+    .portfolio-detail .card-carousel .details-btn {
+        bottom: 18px;
+        right: 18px;
+        padding: 6px 16px;
+        font-size: 10px;
+    }
+
+    .back-link {
+        bottom: 24px;
+        right: 20px;
+        font-size: 0.8125rem;
+        padding: 9px 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .portfolio-detail {
+        padding: calc(var(--nav-height) + 10px) 12px 32px;
+    }
+
+    .portfolio-detail__title {
+        width: min(320px, 92vw);
+    }
+
+    .portfolio-detail .carousel-wrap {
+        gap: 4px;
+    }
+
+    .portfolio-detail .carousel-arrow {
+        width: 32px;
+        height: 32px;
+    }
+
+    .portfolio-detail .carousel-arrow svg {
+        width: 14px;
+        height: 14px;
+    }
+
+    .portfolio-detail .card-carousel {
+        height: 380px;
+    }
+
+    .portfolio-detail .card-carousel .card.pos-0 {
+        width: 180px;
+        height: 215px;
+        transform: translateX(-180px);
+    }
+
+    .portfolio-detail .card-carousel .card.pos-1 {
+        width: 205px;
+        height: 260px;
+        transform: translateX(-96px);
+    }
+
+    .portfolio-detail .card-carousel .card.pos-2 {
+        width: 250px;
+        height: 330px;
+    }
+
+    .portfolio-detail .card-carousel .card.pos-3 {
+        width: 205px;
+        height: 260px;
+        transform: translateX(96px);
+    }
+
+    .portfolio-detail .card-carousel .card.pos-4 {
+        width: 180px;
+        height: 215px;
+        transform: translateX(180px);
+    }
+
+    .back-link {
+        bottom: 20px;
+        right: 16px;
+        font-size: 0.75rem;
+        padding: 8px 14px;
+    }
+}

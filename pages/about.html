@@ -40,7 +40,6 @@
                     <li><a href="home.html">Home</a></li>
                     <li><a class="active" href="about.html">About Me</a></li>
                     <li><a href="portfolio/index.html">Portfolio</a></li>
-                    <li><a href="contact.html">Contact</a></li>
                 </ul>
             </div>
         </div>
@@ -49,17 +48,13 @@
     <section class="about">
         <div class="photo-box photo-box--loading">
             <div class="photo-box__skeleton" aria-hidden="true"></div>
-            <img src="https://picsum.photos/seed/about-photo/840/1080" alt="Sofwatul Widad portrait" loading="lazy">
+            <img src="" alt="" loading="lazy">
         </div>
 
         <div class="content">
             <img class="about-name" src="../assets/images/sofwatul-widad.png" alt="Sofwatul Widad">
             <h3>ABOUT ME</h3>
-            <div class="about-text">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
-                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                <p>Curabitur pretium tincidunt lacus. Nulla gravida orci a odio. Nullam varius, turpis et commodo pharetra, est eros bibendum elit, nec luctus magna felis sollicitudin mauris.</p>
-            </div>
+            <div class="about-text"></div>
 
             <div class="skills">
                 <div class="skill-icon">
@@ -78,6 +73,56 @@
         </div>
     </section>
 
+    <footer class="site-footer">
+        <div class="site-footer__grid">
+            <div class="site-footer__map-col">
+                <div class="site-footer__map">
+                    <iframe
+                        src="https://www.google.com/maps?q=Gg.+Pisang+No.61,+Sekaran,+Kec.+Gn.+Pati,+Kota+Semarang,+Jawa+Tengah+50229,+Indonesia&output=embed"
+                        title="Apieceofia location on Google Maps"
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"
+                        allowfullscreen></iframe>
+                </div>
+                <address class="site-footer__address">
+                    Gg. Pisang No.61, Sekaran, Kec. Gn. Pati<br>
+                    Kota Semarang<br>
+                    Jawa Tengah 50229, Indonesia
+                </address>
+                <p class="site-footer__copyright">&copy; apieceofia</p>
+            </div>
+
+            <div class="site-footer__form-col">
+                <div class="site-footer__form-header">
+                    <h2 class="site-footer__title">GET IN TOUCH</h2>
+                    <div class="site-footer__social">
+                        <a href="#" class="site-footer__social-link">WhatsApp</a>
+                        <a href="#" class="site-footer__social-link">Email</a>
+                        <a href="#" class="site-footer__social-link">Instagram</a>
+                        <a href="#" class="site-footer__social-link">TikTok</a>
+                    </div>
+                </div>
+
+                <form class="site-footer__form" action="#" method="post">
+                    <input type="text" name="name" placeholder="Your Name" autocomplete="name" aria-label="Your Name">
+                    <input type="email" name="email" placeholder="Your Email" autocomplete="email" aria-label="Your Email">
+                    <div class="site-footer__message">
+                        <textarea name="brief" placeholder="Brief" rows="6" aria-label="Brief"></textarea>
+                        <button type="submit" class="site-footer__submit">Send</button>
+                    </div>
+                </form>
+            </div>
+
+            <div class="site-footer__photo-col">
+                <div class="site-footer__placeholder site-footer__placeholder--photo" role="img" aria-label="Photo placeholder">
+                    <span class="site-footer__placeholder-label">PHOTO</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/data-path.js" defer></script>
+    <script src="../js/about.js" defer></script>
     <script src="../js/main.js" defer></script>
 </body>
 

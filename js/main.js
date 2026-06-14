@@ -110,7 +110,8 @@ function isInternalPageLink(anchor) {
         return anchor.origin === window.location.origin;
     }
 
-    return href.endsWith('.html') || !href.includes('.');
+    const pathPart = href.split('?')[0].split('#')[0];
+    return pathPart.endsWith('.html') || !pathPart.includes('.');
 }
 
 function bindPageTransitions(overlay) {

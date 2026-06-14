@@ -1,0 +1,221 @@
+{
+  "defaultDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\n\nDuis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\n\nCurabitur pretium tincidunt lacus. Nulla gravida orci a odio. Nullam varius, turpis et commodo pharetra, est eros bibendum elit, nec luctus magna felis sollicitudin mauris.",
+  "categories": {
+    "poster-design": {
+      "title": "Poster Design",
+      "titleImage": "assets/images/poster-design.png",
+      "items": [
+        {
+          "name": "Advertising Poster",
+          "image": "https://picsum.photos/seed/poster-advertising/840/1080",
+          "year": "2024",
+          "description": "Bold advertising poster designed for retail campaign with strong typography and high-contrast color blocking."
+        },
+        {
+          "name": "Social Campaign Poster",
+          "image": "https://picsum.photos/seed/poster-social/840/1080",
+          "year": "2023",
+          "description": "Social media campaign poster focused on community engagement and shareable visual storytelling."
+        },
+        {
+          "name": "Event Poster",
+          "image": "https://picsum.photos/seed/poster-event/840/1080",
+          "year": "2024",
+          "description": "Event poster with clear hierarchy for date, venue, and headline to attract audience attention quickly."
+        },
+        {
+          "name": "Quotes Poster",
+          "image": "https://picsum.photos/seed/poster-quotes/840/1080",
+          "year": "2023",
+          "description": "Minimal quote poster using expressive type layout and balanced negative space."
+        },
+        {
+          "name": "Academic Poster",
+          "image": "https://picsum.photos/seed/poster-academic/840/1080",
+          "year": "2022",
+          "description": "Academic presentation poster structured for readability with sections for data and key findings."
+        }
+      ]
+    },
+    "brand-logo": {
+      "title": "Brand Logo",
+      "titleImage": "assets/images/brand-logo.png",
+      "items": [
+        {
+          "name": "Cafe Logo",
+          "image": "https://picsum.photos/seed/logo-cafe/840/1080",
+          "year": "2024",
+          "description": "Warm and approachable cafe logo concept with hand-drawn character and rounded letterforms."
+        },
+        {
+          "name": "Fashion Logo",
+          "image": "https://picsum.photos/seed/logo-fashion/840/1080",
+          "year": "2023",
+          "description": "Fashion brand mark emphasizing elegance, clean lines, and premium visual identity."
+        },
+        {
+          "name": "Startup Logo",
+          "image": "https://picsum.photos/seed/logo-startup/840/1080",
+          "year": "2024",
+          "description": "Modern startup logo with geometric symbol and scalable wordmark for digital platforms."
+        },
+        {
+          "name": "Event Logo",
+          "image": "https://picsum.photos/seed/logo-event/840/1080",
+          "year": "2023",
+          "description": "Dynamic event logo designed for banners, badges, and social media promotions."
+        },
+        {
+          "name": "Personal Logo",
+          "image": "https://picsum.photos/seed/logo-personal/840/1080",
+          "year": "2022",
+          "description": "Personal branding logo reflecting creative personality and consistent portfolio identity."
+        }
+      ]
+    },
+    "tshirt-design": {
+      "title": "T-Shirt Design",
+      "titleImage": "assets/images/tshirt-design.png",
+      "items": [
+        {
+          "name": "Graphic Tee",
+          "image": "https://picsum.photos/seed/tshirt-graphic/840/1080",
+          "year": "2024",
+          "description": "Graphic tee artwork with bold illustration style optimized for screen printing."
+        },
+        {
+          "name": "Typography Tee",
+          "image": "https://picsum.photos/seed/tshirt-type/840/1080",
+          "year": "2023",
+          "description": "Typography-led shirt design using custom lettering and strong visual rhythm."
+        },
+        {
+          "name": "Illustration Tee",
+          "image": "https://picsum.photos/seed/tshirt-illustration/840/1080",
+          "year": "2024",
+          "description": "Character illustration tee concept with playful details and limited color palette."
+        },
+        {
+          "name": "Band Merch",
+          "image": "https://picsum.photos/seed/tshirt-band/840/1080",
+          "year": "2023",
+          "description": "Band merchandise design combining logo lockup and tour-inspired graphic elements."
+        },
+        {
+          "name": "Custom Print",
+          "image": "https://picsum.photos/seed/tshirt-custom/840/1080",
+          "year": "2022",
+          "description": "Custom print shirt layout tailored for client brief and wearable composition."
+        }
+      ]
+    },
+    "packaging": {
+      "title": "Packaging Design",
+      "titleImage": "assets/images/packaging.png",
+      "items": [
+        {
+          "name": "Food Packaging",
+          "image": "https://picsum.photos/seed/pack-food/840/1080",
+          "year": "2024",
+          "description": "Food packaging concept with appetizing visuals and clear product information hierarchy."
+        },
+        {
+          "name": "Cosmetic Box",
+          "image": "https://picsum.photos/seed/pack-cosmetic/840/1080",
+          "year": "2023",
+          "description": "Cosmetic box design featuring soft gradients and premium unboxing presentation."
+        },
+        {
+          "name": "Gift Box",
+          "image": "https://picsum.photos/seed/pack-gift/840/1080",
+          "year": "2024",
+          "description": "Gift box packaging with festive pattern system and cohesive label design."
+        },
+        {
+          "name": "Product Label",
+          "image": "https://picsum.photos/seed/pack-label/840/1080",
+          "year": "2023",
+          "description": "Product label layout balancing brand identity, compliance text, and shelf visibility."
+        },
+        {
+          "name": "Beverage Pack",
+          "image": "https://picsum.photos/seed/pack-beverage/840/1080",
+          "year": "2022",
+          "description": "Beverage packaging design with refreshing color story and readable flavor cues."
+        }
+      ]
+    },
+    "clay-art": {
+      "title": "Clay Art",
+      "titleImage": "assets/images/clay-art.png",
+      "items": [
+        {
+          "name": "Mini Sculpture",
+          "image": "https://picsum.photos/seed/clay-mini/840/1080",
+          "year": "2024",
+          "description": "Mini clay sculpture with detailed texture work and expressive character proportions."
+        },
+        {
+          "name": "Character Clay",
+          "image": "https://picsum.photos/seed/clay-character/840/1080",
+          "year": "2023",
+          "description": "Character clay figure crafted with layered shapes and hand-painted finishing."
+        },
+        {
+          "name": "Decor Piece",
+          "image": "https://picsum.photos/seed/clay-decor/840/1080",
+          "year": "2024",
+          "description": "Decorative clay piece designed as a display object with organic form language."
+        },
+        {
+          "name": "Keychain Clay",
+          "image": "https://picsum.photos/seed/clay-keychain/840/1080",
+          "year": "2023",
+          "description": "Compact clay keychain design combining cute styling and durable structure."
+        },
+        {
+          "name": "Custom Order",
+          "image": "https://picsum.photos/seed/clay-custom/840/1080",
+          "year": "2022",
+          "description": "Custom clay art commission based on client reference and personalized details."
+        }
+      ]
+    },
+    "drawing": {
+      "title": "Drawing",
+      "titleImage": "assets/images/drawing.png",
+      "items": [
+        {
+          "name": "Digital Portrait",
+          "image": "https://picsum.photos/seed/drawing-digital/840/1080",
+          "year": "2024",
+          "description": "Digital portrait study focusing on lighting, skin tones, and expressive facial features."
+        },
+        {
+          "name": "Traditional Sketch",
+          "image": "https://picsum.photos/seed/drawing-traditional/840/1080",
+          "year": "2023",
+          "description": "Traditional pencil sketch exploring gesture, contour, and tonal shading."
+        },
+        {
+          "name": "Character Study",
+          "image": "https://picsum.photos/seed/drawing-character/840/1080",
+          "year": "2024",
+          "description": "Character design drawing with pose exploration and costume detail iterations."
+        },
+        {
+          "name": "Line Art",
+          "image": "https://picsum.photos/seed/drawing-line/840/1080",
+          "year": "2023",
+          "description": "Clean line art illustration prepared for coloring and print-ready output."
+        },
+        {
+          "name": "Concept Art",
+          "image": "https://picsum.photos/seed/drawing-concept/840/1080",
+          "year": "2022",
+          "description": "Concept art piece combining environment sketch and mood-driven visual direction."
+        }
+      ]
+    }
+  }
+}
