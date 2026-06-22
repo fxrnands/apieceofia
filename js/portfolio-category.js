@@ -1,15 +1,12 @@
-const CAROUSEL_POSITIONS = ['pos-0', 'pos-1', 'pos-2', 'pos-3', 'pos-4'];
-
 function getPortfolioSlug() {
     const fileName = window.location.pathname.split('/').pop() || '';
     return fileName.replace(/\.html$/, '');
 }
 
-function createCarouselCard(item, positionClass, categorySlug) {
+function createCarouselCard(item, categorySlug) {
     const card = document.createElement('div');
-    card.className = `card ${positionClass}`;
+    card.className = 'card';
     card.dataset.name = item.name;
-    card.dataset.description = item.description || '';
 
     const label = document.createElement('span');
     label.className = 'card-label';
@@ -19,6 +16,7 @@ function createCarouselCard(item, positionClass, categorySlug) {
     image.src = resolveSiteRootPath(item.image);
     image.alt = item.name;
     image.loading = 'lazy';
+    image.decoding = 'async';
 
     const detailsLink = document.createElement('a');
     detailsLink.className = 'details-btn';
@@ -50,9 +48,8 @@ function renderPortfolioCategory() {
     if (!carousel) return;
 
     carousel.replaceChildren();
-    category.items.forEach((item, index) => {
-        const positionClass = CAROUSEL_POSITIONS[index] || CAROUSEL_POSITIONS[CAROUSEL_POSITIONS.length - 1];
-        carousel.appendChild(createCarouselCard(item, positionClass, slug));
+    category.items.forEach((item) => {
+        carousel.appendChild(createCarouselCard(item, slug));
     });
 
     if (typeof initCarousel === 'function') {

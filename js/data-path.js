@@ -20,5 +20,6 @@ function resolveSiteRootPath(path) {
         .filter((segment) => segment && !segment.includes('.'));
 
     const prefix = segments.length ? '../'.repeat(segments.length) : '';
-    return `${prefix}${cleanPath}`;
+    const encodedPath = cleanPath.split('/').map(encodeURIComponent).join('/');
+    return `${prefix}${encodedPath}`;
 }

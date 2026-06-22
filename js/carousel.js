@@ -1,26 +1,67 @@
 function initCarousel(carousel, title) {
     const cards = Array.from(carousel.querySelectorAll('.card'));
     const positions = ['pos-0', 'pos-1', 'pos-2', 'pos-3', 'pos-4'];
+    let activeIndex = Math.min(2, Math.max(0, cards.length - 1));
     let startX = 0;
     let isDragging = false;
+
+    function getVisibleOffsets(count) {
+        if (count >= 5) return [-2, -1, 0, 1, 2];
+        if (count === 4) return [-1, 0, 1, 2];
+        if (count === 3) return [-1, 0, 1];
+        if (count === 2) return [0, 1];
+        return [0];
+    }
+
+    function applyPositions(animate = true) {
+        const count = cards.length;
+        const visibleOffsets = getVisibleOffsets(count);
+        const positionByIndex = new Map();
+
+        visibleOffsets.forEach((offset) => {
+            const cardIndex = (activeIndex + offset + count) % count;
+            positionByIndex.set(cardIndex, positions[2 + offset]);
+        });
+
+        if (!animate) {
+            carousel.classList.add('is-repositioning');
+        }
+
+        cards.forEach((card, index) => {
+            const nextPosition = positionByIndex.get(index);
+
+            card.classList.remove(...positions, 'is-active');
+            card.style.pointerEvents = 'none';
+
+            if (nextPosition) {
+                card.classList.add(nextPosition, 'is-active');
+            }
+        });
+
+        if (!animate) {
+            requestAnimationFrame(() => {
+                carousel.classList.remove('is-repositioning');
+            });
+        }
+
+        carousel.classList.add('is-ready');
+        updateTitle();
+    }
 
     function updateTitle() {
         if (!title) return;
 
-        const activeCard = cards.find((card) => card.classList.contains('pos-2'));
+        const activeCard = cards[activeIndex];
         if (activeCard) {
             title.textContent = activeCard.dataset.name || '';
         }
     }
 
     function rotate(direction) {
-        cards.forEach((card) => {
-            const currentIndex = positions.findIndex((pos) => card.classList.contains(pos));
-            const nextIndex = (currentIndex + direction + positions.length) % positions.length;
-            card.classList.remove(...positions);
-            card.classList.add(positions[nextIndex]);
-        });
-        updateTitle();
+        if (cards.length <= 1) return;
+
+        activeIndex = (activeIndex - direction + cards.length) % cards.length;
+        applyPositions(true);
     }
 
     carousel.addEventListener('mousedown', (event) => {
@@ -57,7 +98,7 @@ function initCarousel(carousel, title) {
         nextBtn?.addEventListener('click', () => rotate(-1));
     }
 
-    updateTitle();
+    applyPositions(false);
 }
 
 window.initCarousel = initCarousel;

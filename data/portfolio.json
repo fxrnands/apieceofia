@@ -1,183 +1,29 @@
 {
   "defaultDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\n\nDuis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\n\nCurabitur pretium tincidunt lacus. Nulla gravida orci a odio. Nullam varius, turpis et commodo pharetra, est eros bibendum elit, nec luctus magna felis sollicitudin mauris.",
   "categories": {
-    "poster-design": {
-      "title": "Poster Design",
-      "titleImage": "assets/images/poster-design.png",
-      "items": [
-        {
-          "name": "Advertising Poster",
-          "image": "https://picsum.photos/seed/poster-advertising/840/1080",
-          "year": "2024",
-          "description": "Bold advertising poster designed for retail campaign with strong typography and high-contrast color blocking."
-        },
-        {
-          "name": "Social Campaign Poster",
-          "image": "https://picsum.photos/seed/poster-social/840/1080",
-          "year": "2023",
-          "description": "Social media campaign poster focused on community engagement and shareable visual storytelling."
-        },
-        {
-          "name": "Event Poster",
-          "image": "https://picsum.photos/seed/poster-event/840/1080",
-          "year": "2024",
-          "description": "Event poster with clear hierarchy for date, venue, and headline to attract audience attention quickly."
-        },
-        {
-          "name": "Quotes Poster",
-          "image": "https://picsum.photos/seed/poster-quotes/840/1080",
-          "year": "2023",
-          "description": "Minimal quote poster using expressive type layout and balanced negative space."
-        },
-        {
-          "name": "Academic Poster",
-          "image": "https://picsum.photos/seed/poster-academic/840/1080",
-          "year": "2022",
-          "description": "Academic presentation poster structured for readability with sections for data and key findings."
-        }
-      ]
-    },
-    "brand-logo": {
-      "title": "Brand Logo",
-      "titleImage": "assets/images/brand-logo.png",
-      "items": [
-        {
-          "name": "Cafe Logo",
-          "image": "https://picsum.photos/seed/logo-cafe/840/1080",
-          "year": "2024",
-          "description": "Warm and approachable cafe logo concept with hand-drawn character and rounded letterforms."
-        },
-        {
-          "name": "Fashion Logo",
-          "image": "https://picsum.photos/seed/logo-fashion/840/1080",
-          "year": "2023",
-          "description": "Fashion brand mark emphasizing elegance, clean lines, and premium visual identity."
-        },
-        {
-          "name": "Startup Logo",
-          "image": "https://picsum.photos/seed/logo-startup/840/1080",
-          "year": "2024",
-          "description": "Modern startup logo with geometric symbol and scalable wordmark for digital platforms."
-        },
-        {
-          "name": "Event Logo",
-          "image": "https://picsum.photos/seed/logo-event/840/1080",
-          "year": "2023",
-          "description": "Dynamic event logo designed for banners, badges, and social media promotions."
-        },
-        {
-          "name": "Personal Logo",
-          "image": "https://picsum.photos/seed/logo-personal/840/1080",
-          "year": "2022",
-          "description": "Personal branding logo reflecting creative personality and consistent portfolio identity."
-        }
-      ]
-    },
-    "tshirt-design": {
-      "title": "T-Shirt Design",
-      "titleImage": "assets/images/tshirt-design.png",
-      "items": [
-        {
-          "name": "Graphic Tee",
-          "image": "https://picsum.photos/seed/tshirt-graphic/840/1080",
-          "year": "2024",
-          "description": "Graphic tee artwork with bold illustration style optimized for screen printing."
-        },
-        {
-          "name": "Typography Tee",
-          "image": "https://picsum.photos/seed/tshirt-type/840/1080",
-          "year": "2023",
-          "description": "Typography-led shirt design using custom lettering and strong visual rhythm."
-        },
-        {
-          "name": "Illustration Tee",
-          "image": "https://picsum.photos/seed/tshirt-illustration/840/1080",
-          "year": "2024",
-          "description": "Character illustration tee concept with playful details and limited color palette."
-        },
-        {
-          "name": "Band Merch",
-          "image": "https://picsum.photos/seed/tshirt-band/840/1080",
-          "year": "2023",
-          "description": "Band merchandise design combining logo lockup and tour-inspired graphic elements."
-        },
-        {
-          "name": "Custom Print",
-          "image": "https://picsum.photos/seed/tshirt-custom/840/1080",
-          "year": "2022",
-          "description": "Custom print shirt layout tailored for client brief and wearable composition."
-        }
-      ]
-    },
-    "packaging": {
-      "title": "Packaging Design",
-      "titleImage": "assets/images/packaging.png",
-      "items": [
-        {
-          "name": "Food Packaging",
-          "image": "https://picsum.photos/seed/pack-food/840/1080",
-          "year": "2024",
-          "description": "Food packaging concept with appetizing visuals and clear product information hierarchy."
-        },
-        {
-          "name": "Cosmetic Box",
-          "image": "https://picsum.photos/seed/pack-cosmetic/840/1080",
-          "year": "2023",
-          "description": "Cosmetic box design featuring soft gradients and premium unboxing presentation."
-        },
-        {
-          "name": "Gift Box",
-          "image": "https://picsum.photos/seed/pack-gift/840/1080",
-          "year": "2024",
-          "description": "Gift box packaging with festive pattern system and cohesive label design."
-        },
-        {
-          "name": "Product Label",
-          "image": "https://picsum.photos/seed/pack-label/840/1080",
-          "year": "2023",
-          "description": "Product label layout balancing brand identity, compliance text, and shelf visibility."
-        },
-        {
-          "name": "Beverage Pack",
-          "image": "https://picsum.photos/seed/pack-beverage/840/1080",
-          "year": "2022",
-          "description": "Beverage packaging design with refreshing color story and readable flavor cues."
-        }
-      ]
-    },
     "clay-art": {
       "title": "Clay Art",
       "titleImage": "assets/images/clay-art.png",
       "items": [
         {
-          "name": "Mini Sculpture",
-          "image": "https://picsum.photos/seed/clay-mini/840/1080",
-          "year": "2024",
-          "description": "Mini clay sculpture with detailed texture work and expressive character proportions."
+          "name": "KARAKTER SOFIA THE FIRST",
+          "image": "assets/images/Clay/KARAKTER SOFIA THE FIRST _ 2024.jpg",
+          "year": "2024"
         },
         {
-          "name": "Character Clay",
-          "image": "https://picsum.photos/seed/clay-character/840/1080",
-          "year": "2023",
-          "description": "Character clay figure crafted with layered shapes and hand-painted finishing."
+          "name": "LIP GLOSS FLOWER KNOWS",
+          "image": "assets/images/Clay/LIP GLOSS FLOWER KNOWS _ 2024.jpg",
+          "year": "2024"
         },
         {
-          "name": "Decor Piece",
-          "image": "https://picsum.photos/seed/clay-decor/840/1080",
-          "year": "2024",
-          "description": "Decorative clay piece designed as a display object with organic form language."
+          "name": "PIALA SEOUL MUSIC AWARDS",
+          "image": "assets/images/Clay/PIALA SEOUL MUSIC AWARDS _ 2024.jpg",
+          "year": "2024"
         },
         {
-          "name": "Keychain Clay",
-          "image": "https://picsum.photos/seed/clay-keychain/840/1080",
-          "year": "2023",
-          "description": "Compact clay keychain design combining cute styling and durable structure."
-        },
-        {
-          "name": "Custom Order",
-          "image": "https://picsum.photos/seed/clay-custom/840/1080",
-          "year": "2022",
-          "description": "Custom clay art commission based on client reference and personalized details."
+          "name": "SURA (MASKOT PEMILU 2024)",
+          "image": "assets/images/Clay/SURA (MASKOT PEMILU 2024) _ 2024.jpg",
+          "year": "2024"
         }
       ]
     },
@@ -186,34 +32,353 @@
       "titleImage": "assets/images/drawing.png",
       "items": [
         {
-          "name": "Digital Portrait",
-          "image": "https://picsum.photos/seed/drawing-digital/840/1080",
-          "year": "2024",
-          "description": "Digital portrait study focusing on lighting, skin tones, and expressive facial features."
+          "name": "18TH BIRTHDAY",
+          "image": "assets/images/Drawing/Digital/18TH BIRTHDAY _ 2024.png",
+          "year": "2024"
         },
         {
-          "name": "Traditional Sketch",
-          "image": "https://picsum.photos/seed/drawing-traditional/840/1080",
-          "year": "2023",
-          "description": "Traditional pencil sketch exploring gesture, contour, and tonal shading."
+          "name": "20241121_082224",
+          "image": "assets/images/Drawing/20241121_082224.jpg",
+          "year": "2024"
         },
         {
-          "name": "Character Study",
-          "image": "https://picsum.photos/seed/drawing-character/840/1080",
-          "year": "2024",
-          "description": "Character design drawing with pose exploration and costume detail iterations."
+          "name": "20250326_225750",
+          "image": "assets/images/Drawing/20250326_225750.jpg",
+          "year": "2024"
         },
         {
-          "name": "Line Art",
-          "image": "https://picsum.photos/seed/drawing-line/840/1080",
-          "year": "2023",
-          "description": "Clean line art illustration prepared for coloring and print-ready output."
+          "name": "CamScanner 23-03-2024 14.02_2",
+          "image": "assets/images/Drawing/CamScanner 23-03-2024 14.02_2.jpg",
+          "year": "2024"
         },
         {
-          "name": "Concept Art",
-          "image": "https://picsum.photos/seed/drawing-concept/840/1080",
-          "year": "2022",
-          "description": "Concept art piece combining environment sketch and mood-driven visual direction."
+          "name": "ELEMEN PRESENTASI TEMA MATEMATIKA",
+          "image": "assets/images/Drawing/Digital/ELEMEN PRESENTASI TEMA MATEMATIKA _ 2025.png",
+          "year": "2025"
+        },
+        {
+          "name": "GADIS KECIL PENARI RONGGENG MENOR",
+          "image": "assets/images/Drawing/Traditional/GADIS KECIL PENARI RONGGENG MENOR _ 2023.png",
+          "year": "2023"
+        },
+        {
+          "name": "GAMBAR ALAM BENDA BUAH",
+          "image": "assets/images/Drawing/Traditional/GAMBAR ALAM BENDA BUAH _ 2024.jpg",
+          "year": "2024"
+        },
+        {
+          "name": "GAMBAR ALAM BENDA DAUN KERING",
+          "image": "assets/images/Drawing/Traditional/GAMBAR ALAM BENDA DAUN KERING _ 2024.png",
+          "year": "2024"
+        },
+        {
+          "name": "GAMBAR ALAM BENDA KAIN",
+          "image": "assets/images/Drawing/Traditional/GAMBAR ALAM BENDA KAIN _ 2024.png",
+          "year": "2024"
+        },
+        {
+          "name": "GAMBAR ALAM BENDA PATUNG",
+          "image": "assets/images/Drawing/Traditional/GAMBAR ALAM BENDA PATUNG _ 2024.jpg",
+          "year": "2024"
+        },
+        {
+          "name": "GAMBAR ALAM BENDA PATUNG & BALOK",
+          "image": "assets/images/Drawing/Traditional/GAMBAR ALAM BENDA PATUNG & BALOK _ 2024.jpg",
+          "year": "2024"
+        },
+        {
+          "name": "GAMBAR BINATANG AYAM",
+          "image": "assets/images/Drawing/Traditional/GAMBAR BINATANG AYAM _ 2024.jpg",
+          "year": "2024"
+        },
+        {
+          "name": "GAMBAR BINATANG AYAM 2",
+          "image": "assets/images/Drawing/Traditional/GAMBAR BINATANG AYAM 2 _ 2024.jpg",
+          "year": "2024"
+        },
+        {
+          "name": "GAMBAR BINATANG KATAK",
+          "image": "assets/images/Drawing/Traditional/GAMBAR BINATANG KATAK _ 2024.jpg",
+          "year": "2024"
+        },
+        {
+          "name": "GAMBAR BINATANG KUCING",
+          "image": "assets/images/Drawing/Traditional/GAMBAR BINATANG KUCING _ 2024.jpg",
+          "year": "2024"
+        },
+        {
+          "name": "GAMBAR BINATANG T-REX",
+          "image": "assets/images/Drawing/Traditional/GAMBAR BINATANG T-REX _ 2024.jpg",
+          "year": "2024"
+        },
+        {
+          "name": "HOTDOG VECTOR DRAWING",
+          "image": "assets/images/Drawing/Digital/HOTDOG VECTOR DRAWING.jpg",
+          "year": "2024"
+        },
+        {
+          "name": "ILUSTRASI BUKU _PERJALANAN MENUJU TELAGA HARAPAN_",
+          "image": "assets/images/Drawing/Traditional/ILUSTRASI BUKU _PERJALANAN MENUJU TELAGA HARAPAN_ _ 2024.webp",
+          "year": "2024"
+        },
+        {
+          "name": "KARAKTER CHEF (MOM_S RECIPE SILKY PUDDING)",
+          "image": "assets/images/Drawing/Digital/KARAKTER CHEF (MOM_S RECIPE SILKY PUDDING) _ 2026.png",
+          "year": "2026"
+        },
+        {
+          "name": "KARAKTER PENYU",
+          "image": "assets/images/Drawing/Traditional/KARAKTER PENYU _ 2024.jpg",
+          "year": "2024"
+        },
+        {
+          "name": "KARAKTER PEREMPUAN MENGAJI",
+          "image": "assets/images/Drawing/Digital/KARAKTER PEREMPUAN MENGAJI _ 2025.png",
+          "year": "2025"
+        },
+        {
+          "name": "MANURIOS",
+          "image": "assets/images/Drawing/Traditional/MANURIOS _ 2024.jpg",
+          "year": "2024"
+        },
+        {
+          "name": "MEDALION MERAK",
+          "image": "assets/images/Drawing/Traditional/MEDALION MERAK _ 2024.png",
+          "year": "2024"
+        },
+        {
+          "name": "OHLINS",
+          "image": "assets/images/Drawing/Traditional/OHLINS _ 2024.jpg",
+          "year": "2024"
+        },
+        {
+          "name": "PERSONA ART",
+          "image": "assets/images/Drawing/Digital/PERSONA ART _ 2023.png",
+          "year": "2023"
+        },
+        {
+          "name": "PERTARUNGAN SINGA",
+          "image": "assets/images/Drawing/Traditional/PERTARUNGAN SINGA _ 2024.jpg",
+          "year": "2024"
+        },
+        {
+          "name": "PIXEL ART SELF POTRAIT",
+          "image": "assets/images/Drawing/Digital/PIXEL ART SELF POTRAIT _ 2024.png",
+          "year": "2024"
+        },
+        {
+          "name": "SOLO",
+          "image": "assets/images/Drawing/Digital/SOLO _ 2025.png",
+          "year": "2025"
+        },
+        {
+          "name": "Tak berjudul178_20240528175759",
+          "image": "assets/images/Drawing/Tak berjudul178_20240528175759.png",
+          "year": "2024"
+        },
+        {
+          "name": "Tak berjudul429_Dipulihkan7_20251130133804",
+          "image": "assets/images/Drawing/Tak berjudul429_Dipulihkan7_20251130133804.png",
+          "year": "2024"
+        },
+        {
+          "name": "Tak berjudul429_Dipulihkan_20251013003738",
+          "image": "assets/images/Drawing/Tak berjudul429_Dipulihkan_20251013003738.png",
+          "year": "2024"
+        },
+        {
+          "name": "Tak berjudul440_20251103003550",
+          "image": "assets/images/Drawing/Tak berjudul440_20251103003550.png",
+          "year": "2024"
+        },
+        {
+          "name": "Tak berjudul88_20251224162733",
+          "image": "assets/images/Drawing/Tak berjudul88_20251224162733.png",
+          "year": "2024"
+        },
+        {
+          "name": "THE BUNNY AND HER WORLD",
+          "image": "assets/images/Drawing/Digital/THE BUNNY AND HER WORLD _ 2025.png",
+          "year": "2025"
+        },
+        {
+          "name": "TIPOGRAFI PINEAPPLE",
+          "image": "assets/images/Drawing/Traditional/TIPOGRAFI PINEAPPLE _ 2024.jpeg",
+          "year": "2024"
+        },
+        {
+          "name": "TIPOGRAFI RAPUNZEL",
+          "image": "assets/images/Drawing/Traditional/TIPOGRAFI RAPUNZEL _ 2024.png",
+          "year": "2024"
+        },
+        {
+          "name": "TIPOGRAFI RAWON",
+          "image": "assets/images/Drawing/Traditional/TIPOGRAFI RAWON _ 2024.png",
+          "year": "2024"
+        }
+      ]
+    },
+    "brand-logo": {
+      "title": "Brand Logo",
+      "titleImage": "assets/images/brand-logo.png",
+      "items": [
+        {
+          "name": "SOFIA HAIRCARE",
+          "image": "assets/images/Logo/SOFIA HAIRCARE _ 2023.jpg",
+          "year": "2023"
+        },
+        {
+          "name": "UMKM STEAK ONLINE",
+          "image": "assets/images/Logo/UMKM STEAK ONLINE _ 2025.png",
+          "year": "2025"
+        },
+        {
+          "name": "UMKM VLOWERSOFIA",
+          "image": "assets/images/Logo/UMKM VLOWERSOFIA _ 2025.png",
+          "year": "2025"
+        }
+      ]
+    },
+    "packaging": {
+      "title": "Packaging Design",
+      "titleImage": "assets/images/packaging.png",
+      "items": [
+        {
+          "name": "BOKKO RABOKKI",
+          "image": "assets/images/Packaging/BOKKO RABOKKI _ 2024.png",
+          "year": "2024"
+        },
+        {
+          "name": "COKLAT SWEET NOIR",
+          "image": "assets/images/Packaging/COKLAT SWEET NOIR _ 2024.png",
+          "year": "2024"
+        },
+        {
+          "name": "FANCY PACKAGING CHARM COOLING FRESH",
+          "image": "assets/images/Packaging/6/FANCY PACKAGING CHARM COOLING FRESH _ 2026.png",
+          "year": "2026"
+        },
+        {
+          "name": "MOM_S RECIPE SILKY PUDDING",
+          "image": "assets/images/Packaging/4/MOM_S RECIPE SILKY PUDDING _ 2026.jpg",
+          "year": "2026"
+        },
+        {
+          "name": "MY BABY MINYAK TELON LAVENDER",
+          "image": "assets/images/Packaging/3/MY BABY MINYAK TELON LAVENDER _ 2026.jpg",
+          "year": "2026"
+        },
+        {
+          "name": "SINAR REJEKI",
+          "image": "assets/images/Packaging/1/SINAR REJEKI _ 2026.png",
+          "year": "2026"
+        },
+        {
+          "name": "SPC MASK KN95",
+          "image": "assets/images/Packaging/2/SPC MASK KN95 _ 2026.png",
+          "year": "2026"
+        },
+        {
+          "name": "YUPI STRAWBERRY KISS VALENTINE EDITION",
+          "image": "assets/images/Packaging/5/YUPI STRAWBERRY KISS VALENTINE EDITION _ 2026 .jpg",
+          "year": "2026"
+        }
+      ]
+    },
+    "poster-design": {
+      "title": "Poster Design",
+      "titleImage": "assets/images/poster-design.png",
+      "items": [
+        {
+          "name": "5 INDONESIAN CULTURE CHARACTERISTIC",
+          "image": "assets/images/Poster Design/Academic/5 INDONESIAN CULTURE CHARACTERISTIC _ 2023.png",
+          "year": "2023"
+        },
+        {
+          "name": "BERHENTI MEROKOK",
+          "image": "assets/images/Poster Design/Social Campaign/BERHENTI MEROKOK _ 2025.jpg",
+          "year": "2025"
+        },
+        {
+          "name": "BOROBUDUR MOON FESTIVAL 2025",
+          "image": "assets/images/Poster Design/Event/BOROBUDUR MOON FESTIVAL 2025 _ 2025.png",
+          "year": "2025"
+        },
+        {
+          "name": "CALON ARANG",
+          "image": "assets/images/Poster Design/Academic/CALON ARANG _ 2024.png",
+          "year": "2024"
+        },
+        {
+          "name": "JOYKO CORRECTION TAPE",
+          "image": "assets/images/Poster Design/Advertising/JOYKO CORRECTION TAPE _ 2025.jpg",
+          "year": "2025"
+        },
+        {
+          "name": "LESTARIKAN LINGKUNGAN, BANGKITKAN PEREKONOMIAN",
+          "image": "assets/images/Poster Design/Academic/LESTARIKAN LINGKUNGAN, BANGKITKAN PEREKONOMIAN _ 2023.png",
+          "year": "2023"
+        },
+        {
+          "name": "NANCY AJRAM LIVE CONCERT 2025",
+          "image": "assets/images/Poster Design/Event/NANCY AJRAM LIVE CONCERT 2025  _ 2025.png",
+          "year": "2025"
+        },
+        {
+          "name": "PIZZA",
+          "image": "assets/images/Poster Design/Advertising/PIZZA _ 2025.jpg",
+          "year": "2025"
+        },
+        {
+          "name": "QUOTE 1",
+          "image": "assets/images/Poster Design/Quotes/QUOTE 1 _ 2025.png",
+          "year": "2025"
+        },
+        {
+          "name": "QUOTE 2",
+          "image": "assets/images/Poster Design/Quotes/QUOTE 2 _ 2025.png",
+          "year": "2025"
+        },
+        {
+          "name": "QUOTE 3",
+          "image": "assets/images/Poster Design/Quotes/QUOTE 3 _ 2025.png",
+          "year": "2025"
+        },
+        {
+          "name": "QUOTE 4",
+          "image": "assets/images/Poster Design/Quotes/QUOTE 4 _ 2025.png",
+          "year": "2025"
+        },
+        {
+          "name": "SHELL ADVANCE",
+          "image": "assets/images/Poster Design/Advertising/SHELL ADVANCE _ 2025.jpg",
+          "year": "2025"
+        },
+        {
+          "name": "STRATEGI PENGENDALIAN SAMPAH PLASTIK",
+          "image": "assets/images/Poster Design/Academic/STRATEGI PENGENDALIAN SAMPAH PLASTIK _ 2025.jpg",
+          "year": "2025"
+        },
+        {
+          "name": "THE ORIGINOTE MOISTURIZER",
+          "image": "assets/images/Poster Design/Advertising/THE ORIGINOTE MOISTURIZER _ 2025.jpg",
+          "year": "2025"
+        }
+      ]
+    },
+    "tshirt-design": {
+      "title": "T-Shirt Design",
+      "titleImage": "assets/images/tshirt-design.png",
+      "items": [
+        {
+          "name": "T-SHIRT BUNNY",
+          "image": "assets/images/T-Shirt/T-SHIRT BUNNY _ 2025.png",
+          "year": "2025"
+        },
+        {
+          "name": "T-SHIRT SOLO",
+          "image": "assets/images/T-Shirt/T-SHIRT SOLO _ 2025.png",
+          "year": "2025"
         }
       ]
     }

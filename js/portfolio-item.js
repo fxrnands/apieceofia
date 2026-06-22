@@ -35,11 +35,6 @@ function renderPortfolioItem() {
         title.textContent = item.name;
     }
 
-    const description = document.querySelector('.portfolio-item__description');
-    if (description) {
-        description.textContent = item.description;
-    }
-
     const backLink = document.getElementById('portfolio-item-back');
     if (backLink) {
         backLink.href = `${categorySlug}.html`;
