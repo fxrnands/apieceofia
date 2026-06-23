@@ -17,59 +17,14 @@ body {
     width: 480px;
     max-width: 100%;
     height: 620px;
-    background: #e0e0e0;
     border-radius: 15px;
     flex-shrink: 0;
-    overflow: hidden;
-}
-
-.photo-box__skeleton {
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(
-        90deg,
-        #d8d8d8 0%,
-        #ececec 50%,
-        #d8d8d8 100%
-    );
-    background-size: 200% 100%;
-    animation: photo-skeleton 1.4s ease-in-out infinite;
 }
 
 .photo-box img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    display: block;
-    opacity: 0;
-    transition: opacity 0.4s ease;
-}
-
-.photo-box:not(.photo-box--loading) img {
-    opacity: 1;
-}
-
-.photo-box:not(.photo-box--loading) .photo-box__skeleton {
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.3s ease, visibility 0.3s ease;
-}
-
-@keyframes photo-skeleton {
-    0% {
-        background-position: 200% 0;
-    }
-
-    100% {
-        background-position: -200% 0;
-    }
-}
-
-@media (prefers-reduced-motion: reduce) {
-    .photo-box__skeleton {
-        animation: none;
-        background: #d8d8d8;
-    }
 }
 
 .content {

@@ -21,8 +21,7 @@ function renderPortfolioItem() {
 
     const photo = document.querySelector('.portfolio-item__photo');
     if (photo) {
-        photo.src = resolveSiteRootPath(item.image);
-        photo.alt = item.name;
+        setImageWithSkeleton(photo, resolveSiteRootPath(item.image), item.name);
     }
 
     const year = document.querySelector('.portfolio-item__year');

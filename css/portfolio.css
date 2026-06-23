@@ -29,6 +29,10 @@ body {
     background: #9b9b9b;
 }
 
+.card-image.image-skeleton {
+    position: relative;
+}
+
 .card-image img {
     width: 100%;
     height: 100%;

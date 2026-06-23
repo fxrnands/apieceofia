@@ -47,8 +47,9 @@
 
     <main>
         <section class="portfolio-item">
-            <div class="portfolio-item__media">
-                <img class="portfolio-item__photo" src="" alt="">
+            <div class="portfolio-item__media image-skeleton image-skeleton--loading">
+                <div class="image-skeleton__shimmer" aria-hidden="true"></div>
+                <img class="portfolio-item__photo" src="" alt="" decoding="async">
             </div>
 
             <div class="portfolio-item__content">
@@ -122,6 +123,7 @@
     </footer>
 
     <script src="../../js/data-path.js" defer></script>
+    <script src="../../js/image-skeleton.js" defer></script>
     <script src="../../js/footer.js" defer></script>
     <script src="../../js/portfolio-data.js" defer></script>
     <script src="../../js/portfolio-item.js" defer></script>

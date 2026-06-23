@@ -94,14 +94,20 @@
     display: block;
 }
 
-.site-footer__photo {
+.site-footer__photo-wrap,
+.site-footer__photo.image-skeleton {
     flex: 1;
     width: 100%;
     min-height: 380px;
     border-radius: 20px;
+}
+
+.site-footer__photo-wrap img,
+.site-footer__photo {
+    width: 100%;
+    height: 100%;
+    min-height: 380px;
     object-fit: cover;
-    display: block;
-    background: #ffffff;
 }
 
 .site-footer__address {
@@ -292,6 +298,7 @@
         max-width: none;
     }
 
+    .site-footer__photo-wrap,
     .site-footer__photo {
         min-height: 320px;
     }

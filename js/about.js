@@ -1,8 +1,7 @@
 function renderAboutContent(data) {
     const photo = document.querySelector('.photo-box img');
     if (photo && data.photo) {
-        photo.src = resolveSiteRootPath(data.photo.src);
-        photo.alt = data.photo.alt || '';
+        setImageWithSkeleton(photo, resolveSiteRootPath(data.photo.src), data.photo.alt || '');
     }
 
     const aboutText = document.querySelector('.about-text');

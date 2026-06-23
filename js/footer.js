@@ -21,8 +21,7 @@ function renderFooterContent(data) {
 
     const photo = document.querySelector('.site-footer__photo');
     if (photo && data.photo) {
-        photo.src = resolveSiteRootPath(data.photo.src);
-        photo.alt = data.photo.alt || '';
+        setImageWithSkeleton(photo, resolveSiteRootPath(data.photo.src), data.photo.alt || '');
     }
 
     const form = document.querySelector('.site-footer__form');

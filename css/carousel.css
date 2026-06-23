@@ -109,6 +109,12 @@
     transition: none;
 }
 
+.card-carousel .card .card__image-wrap {
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+}
+
 .card-carousel .card img {
     width: 100%;
     height: 100%;

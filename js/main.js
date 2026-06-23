@@ -174,23 +174,9 @@ function initMobileNav() {
 }
 
 function initAboutPhotoSkeleton() {
-    const photoBox = document.querySelector('.photo-box--loading');
-    if (!photoBox) return;
-
-    const image = photoBox.querySelector('img');
-    if (!image) return;
-
-    const revealPhoto = () => {
-        photoBox.classList.remove('photo-box--loading');
-    };
-
-    if (image.complete) {
-        revealPhoto();
-        return;
-    }
-
-    image.addEventListener('load', revealPhoto, { once: true });
-    image.addEventListener('error', revealPhoto, { once: true });
+    initImageSkeletons();
+    initHeroPhotoSkeletons();
+    initFooterPhotoSkeleton();
 }
 
 function initPageTransitions() {

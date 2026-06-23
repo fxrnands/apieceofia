@@ -12,18 +12,26 @@ function createCarouselCard(item, categorySlug) {
     label.className = 'card-label';
     label.textContent = item.name;
 
+    const imageWrap = document.createElement('div');
+    imageWrap.className = 'card__image-wrap image-skeleton image-skeleton--loading';
+
+    const shimmer = document.createElement('div');
+    shimmer.className = 'image-skeleton__shimmer';
+    shimmer.setAttribute('aria-hidden', 'true');
+
     const image = document.createElement('img');
-    image.src = resolveSiteRootPath(item.image);
-    image.alt = item.name;
-    image.loading = 'lazy';
     image.decoding = 'async';
+    image.alt = item.name;
 
     const detailsLink = document.createElement('a');
     detailsLink.className = 'details-btn';
     detailsLink.href = getPortfolioItemUrl(categorySlug, item.slug);
     detailsLink.textContent = 'See Details';
 
-    card.append(label, image, detailsLink);
+    imageWrap.append(shimmer, image);
+    card.append(label, imageWrap, detailsLink);
+
+    setImageWithSkeleton(image, resolveSiteRootPath(item.image), item.name);
     return card;
 }
 
